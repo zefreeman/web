@@ -63,6 +63,15 @@
 		<a href="https://doi.org/10.1038/s41386-022-01284-7">doi.org/10.1038/s41386-022-01284-7</a><br><br>
         </p>
         <hr>
+		<br>
+		<p>Last updated: <span id="thedate"></span></p>
+        
+		<script>
+			const date = new Date(document.lastModified);
+			document.getElementById("thedate").textContent =
+				date.toLocaleDateString("en-GB");
+		</script>
+		
     </div>
     </article>
 
