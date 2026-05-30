@@ -5,16 +5,16 @@
     box-sizing: border-box;
 }
 
-/* global typeface */
+/* Degheest typeface 
  @font-face {
   font-family: Degheest;
   src: url(Latitude-Regular.woff);
-}
+}*/
 
 body {
-    font-family: Degheest, sans-serif;
-    font-size: 16px;
-    background: #fcfcff; /*#F8F8FF;   #f7f4fb; */
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #fcfcff;
 }
 
 /* hr width consistently across browsers */
@@ -119,13 +119,8 @@ article {
     min-width: 0;
 }
 
-/* paragraph and list typeface */
-p,
-.p {
-	font-family: Helvetica, sans-serif;
-	}
 
-	
+
 /* responsive to small sites*/
 @media (max-width: 900px) {
   .container {
