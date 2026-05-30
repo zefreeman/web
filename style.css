@@ -17,6 +17,14 @@ body {
     background: #fcfcff; /*#F8F8FF;   #f7f4fb; */
 }
 
+/* hr width consistently across browsers */
+hr {
+  border: none;
+  height: 1px;
+  background: black;
+  margin: 1em 0; /* optional spacing */
+}
+
 /* flexbox layout */
 .container {
     display: flex;
@@ -68,7 +76,7 @@ nav ul li {
   padding: 10px;
 }
 
-/* Responsive fix for mobile */
+/* Responsive for mobile/small sites */
 @media (max-width: 600px) {
   .column,
   .column-narrow {
@@ -118,21 +126,21 @@ p,
 	}
 
 	
-/* responsive */
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
+/* responsive to small sites*/
+@media (max-width: 900px) {
+  .container {
+      flex-direction: column;
+  }
 
-    nav {
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid black;
-    }
+  nav {
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid black;
+  }
 
-    article {
-        width: 100%;
-        height: auto;
-    }
+  article {
+      width: 100%;
+      height: auto;
+  }
 }
