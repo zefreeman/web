@@ -110,6 +110,13 @@ a:hover, a:active {
   text-decoration: none !important;
 }
 
+/* hanging indent for "- " bullet lines that wrap onto multiple lines */
+.bullet {
+  display: block;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
 /* article */
 article {
     width: 57%;
