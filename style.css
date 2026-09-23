@@ -132,6 +132,8 @@ a:hover, a:active {
 
 /* dark mode toggle button */
 .theme-toggle {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
