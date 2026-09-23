@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+/* theme colors */
+:root {
+  --bg: #fcfcff;
+  --nav-bg: #fcfcff;
+  --text-color: black;
+  --border-color: black;
+  --link-hover: #3b4a1e;
+}
+
+:root[data-theme="dark"] {
+  --bg: #16171b;
+  --nav-bg: #16171b;
+  --text-color: #e8e8ec;
+  --border-color: #55565c;
+  --link-hover: #9cc26b;
+}
+
 /* Degheest typeface 
  @font-face {
   font-family: Degheest;
@@ -14,14 +31,16 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background: #fcfcff;
+  background: var(--bg);
+  color: var(--text-color);
+  transition: background-color .15s ease, color .15s ease;
 }
 
 /* hr width consistently across browsers */
 hr {
   border: none;
   height: 1px;
-  background: black;
+  background: var(--border-color);
   margin: 1em 0; /* optional spacing */
 }
 
@@ -37,9 +56,10 @@ nav {
     width: 23%;
     height: 700px;
     padding: 30px;
-    background: #fcfcff;  /* #f7f4fb; */
-    border-right: 1px solid black;
+    background: var(--nav-bg);
+    border-right: 1px solid var(--border-color);
     flex-shrink: 0;
+    transition: background-color .15s ease, border-color .15s ease;
 }
 
 nav ul {
@@ -97,17 +117,37 @@ nav ul li {
 
 /* links */
 a {
-    color: black;
+    color: var(--text-color);
     text-decoration-style: dotted;
 }
 
 a:hover, a:active {
-    color: #3b4a1e
+    color: var(--link-hover)
 }
 
 /* no underline designation */
 .no-underline {
   text-decoration: none !important;
+}
+
+/* dark mode toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
 }
 
 /* hanging indent for "- " bullet lines that wrap onto multiple lines */
@@ -138,7 +178,7 @@ article {
       width: 100%;
       height: auto;
       border-right: none;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid var(--border-color);
   }
 
   article {
